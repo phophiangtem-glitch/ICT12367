@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block title %}✿เกี่ยวกับเรา✿{% endblock %}
+
+{% block content %}
+
+<style>
+    /* พื้นหลังแบบ Gradient */
+    body {
+        background: linear-gradient(135deg, #badeff, #ffffff, #c3d8ff);
+        background-attachment: fixed;
+        font-family: "Prompt", sans-serif;
+    }
+
+    /* กล่องกลางแบบ Glassmorphism */
+    .gallery-container {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.35);
+        backdrop-filter: blur(12px);
+        border-radius: 18px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    }
+
+    .gallery-title {
+        text-align: center;
+        font-size: 32px;
+        margin-bottom: 25px;
+        font-weight: bold;
+        color: #997062;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    }
+
+    /* กริดรูปภาพ */
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .gallery-card {
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 5px 18px rgba(0,0,0,0.25);
+        transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .gallery-card:hover {
+        transform: translateY(-6px) scale(1.04);
+        box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+    }
+
+    .gallery-card img {
+        width: 100%;
+        height: 190px;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s ease;
+    }
+
+    .gallery-card:hover img {
+        transform: scale(1.15);
+    }
+
+</style>
+
+<div class="gallery-container">
+
+    <h2 class="gallery-title">✿เกี่ยวกับเรา✿</h2>
+
+    <div class="gallery">
+        <div class="gallery-card"><img src="https://i.pinimg.com/736x/93/55/7e/93557ef5fdf750765554290557e84ef5.jpg"></div>
+        <div class="gallery-card"><img src="https://i.pinimg.com/736x/76/8a/62/768a629875a0b51fdfeff553c63d4af4.jpg"></div>
+        <div class="gallery-card"><img src="https://i.pinimg.com/736x/2b/75/2a/2b752a789c0445145a0613f3726438bc.jpg"></div>
+        <div class="gallery-card"><img src="https://i.pinimg.com/736x/55/6a/f8/556af8c0728d1c9f3b757ece0495f660.jpg"></div>
+        <div class="gallery-card"><img src="https://i.pinimg.com/736x/b8/93/95/b893954d82af8832a5f2c807a81467b6.jpg"></div>
+        <div class="gallery-card"><img src="https://i.pinimg.com/736x/2f/66/46/2f6646e2ff72440c92666e15ee36487d.jpg"></div>
+        <div class="gallery-card"><img src="https://i.pinimg.com/1200x/e2/b3/4c/e2b34cccbb1f011b799f92b52d36f758.jpg"></div>
+        <div class="gallery-card"><img src="https://i.pinimg.com/736x/a4/dd/b7/a4ddb7cb8026a7e42df80e6265f32d97.jpg"></div>
+        <div class="gallery-card"><img src="https://i.pinimg.com/736x/89/5c/20/895c20b677fdf68103f116e383e20432.jpg"></div>
+    </div>
+
+</div>
+
+{% endblock %}

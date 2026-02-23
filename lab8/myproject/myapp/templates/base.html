@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}หน้าหลักของเว็บไซต์{% endblock %}</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Prompt", sans-serif;
+            background: #f5efe6;
+        }
+
+        /* ----- NAVBAR ----- */
+        nav {
+            background: #A6C3E4;
+            text-align: center;
+            padding: 15px 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 25px;
+            font-size: 18px;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            color: #C3EEFA;
+            text-decoration: underline;
+        }
+
+        /* เส้นแบ่ง */
+        hr {
+            border: none;
+            border-top: 1px solid #e8faff;
+            margin: 0;
+        }
+
+        /* ----- CONTENT AREA ----- */
+        .content-box {
+            padding: 40px 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- เมนูนำทาง -->
+    <nav>
+        <a href="/">หน้าหลัก</a>
+        <a href="/about">เกี่ยวกับเรา</a>
+        <a href="/form">แบบฟอร์ม</a>
+    </nav>
+
+    <hr>
+
+    <!-- ส่วนที่ไฟล์อื่นนำไปเติม -->
+    <div class="content-box">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+</body>
+</html>
