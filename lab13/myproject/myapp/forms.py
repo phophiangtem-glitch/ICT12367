@@ -1,0 +1,9 @@
+# myapp/forms.py
+
+from django import forms
+from .models import Person
+
+class PersonForm(forms.ModelForm):
+    class Meta:
+        model = Person
+        fields = ['name', 'age', 'detail']  # กำหนดฟิลด์ที่ต้องการให้แก้ไข
